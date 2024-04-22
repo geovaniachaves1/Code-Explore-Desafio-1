@@ -14,7 +14,7 @@ Este é um simples site de apresentação pessoal desenvolvido em HTML e CSS, qu
 - Exibe informações sobre Geovania, incluindo sua formação e interesses.
 - Fornece links para suas redes sociais (LinkedIn e GitHub).
 <p> 
-    <img width="500" height="720" src="./img/foto do projeto.png" >
+    <img width="200" height="500" src="./img/foto do projeto.png" >
 </p>
 
 ## Pré-requisitos
