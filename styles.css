@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --cor-secundaria: #F2F2F2;
+    --cor-terciaria:#6C0345;
+    --Cor-complementar:#DC6B19;
+    --cor-complementar:#F7C566;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+   background-color: #6C0345;
+    color:var(--cor-secundaria);
+}
+
+header{
+    padding: 5px 0 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 2px solid #dc6a1962;
+}
+    
+
+header nav{
+    height: 10vh;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3em;
+}
+.logo i{
+    height: 40px;
+    width:40px;
+    background: var(--Cor-complementar);
+    border-radius: 50%;
+    color:var(--cor-secundaria);
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding: 8px;
+    margin-right: 5px;
+    cursor: pointer;
+    text-align: center;
+    
+}
+.logo .logo-text{
+    font-size: 24px;
+    font-weight: 500;
+    color:var(--cor-secundaria);
+}
+
+header ul{
+    display: flex;
+    gap: 4rem;
+    list-style: none;
+    margin: auto 5em ;
+}
+
+header a{
+    display: block;
+    color:var(--cor-secundaria);
+    text-decoration: none;
+    border-radius: .2rem;
+    padding: 0.2rem 1rem;
+    transition: .2s ease-in;
+    border-bottom: 2px solid var(--Cor-complementar);
+    overflow: hidden;
+    position: relative;
+    
+}
+
+header a::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: .1rem;
+    z-index: -1;
+    transition: .2s ease-in;
+    transform: translateX(-101%);
+    background: var(--cor-complementar);
+}
+header a:hover::before{
+    transform: translateX(0);
+}
+
+header a:hover{
+    color: var(--cor-primaria)
+}
+
+
+.s-container{
+    min-height: 80vh;
+    width: 110%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+img{
+    border-radius: 50%;
+        width: 350px;
+        height: 350px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 15px solid var(--cor-complementar);
+        box-shadow: 5px 7px 25px rgba(0,0,0,0.5);
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 40%;
+}
+
+.subtitle{
+    letter-spacing: 2px;
+    font-size: 2rem;
+    font-weight: 600; 
+}
+
+.title{
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 3rem;
+    margin-bottom: 1rem;
+}
+
+.title span{
+    font-weight: 900;
+    color: var(--Cor-complementar);
+}
+
+.descricao{
+    color:var(--cor-secundaria);
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2em;
+}
+strong{
+        font-weight: 900;
+        color: var(--Cor-complementar);
+}
+
+.buttons{
+    display: flex;
+    gap: 1rem;
+    margin: 2rem;
+}
+
+ .buttons a{
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color:var(--cor-secundaria);
+    padding: .8rem 1.6rem;
+    outline: none; border: none;
+    border-radius: 10px;
+    transition: .3s ease-out;
+    cursor: pointer;
+    box-shadow: 3px 3px 0 rgba(255, 253, 253, 0.4);
+    
+}
+
+.buttons a{
+    text-decoration: none;
+    background-color: var(--Cor-complementar);
+    color:var(--cor-secundaria);
+}
+
+.buttons a:hover{
+    background-color: var(--cor-secundaria);
+    color: var(--cor-terciaria);
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 50px;
+    align-items: center;
+    border-top:2px solid #dc6a1962;
+    color:var(--cor-secundaria);
+    font-size: 1em;
+}
+/* Responsividade */
+
+/* Ajuste o estilo do header para telas menores */
+@media only screen and (max-width: 768px) {
+    .logo {
+        margin: 1em;
+    }
+    .logo i {
+        font-size: 1.2rem;
+    }
+    .logo-text {
+        font-size: 1rem;
+    }
+    header ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 5.5vh;
+        right: 0;
+        background-color: var(--cor-primaria); /* Adicione a cor de fundo */
+        width: 100%;
+        text-align: center;
+    }
+    header ul.show {
+        display: flex;
+    }
+    header ul li {
+        padding: 1rem;
+    }
+}
+
+/* Ajuste a imagem e o conteúdo para telas menores */
+@media only screen and (max-width: 768px) {
+    .s-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .imagem {
+        order: -1;
+    }
+    img {
+        width: 200px;
+        height: 200px;
+    }
+    .content {
+        max-width: 100%;
+        text-align: center;
+    }
+}
+
+/* Ajuste o footer para telas menores */
+@media only screen and (max-width: 768px) {
+    footer {
+        padding: 10px;
+        text-align: center;
+    }
+}
+
+
+
+    
